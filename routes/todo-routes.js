@@ -1,7 +1,7 @@
 const express = require('express');
 
 const todoRoutes = express.Router();
-const todoController = require('../controllers/pokemon-controller');
+const todoController = require('../controllers/todo-controller');
 
 todoRoutes.get('/', todoController.index);
 // todoRoutes.post('/', todoController.create);
