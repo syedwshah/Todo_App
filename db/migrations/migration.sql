@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS todo_sql (
   task TEXT,
   deadline VARCHAR(255),
   location VARCHAR(255),
-  difficulty INTEGER
+  priority INTEGER,
+  complete BOOLEAN
 );

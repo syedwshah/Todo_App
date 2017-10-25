@@ -12,21 +12,24 @@ Todo.findById = id => {
 Todo.create = todo => {
   return db.one(`
     INSERT INTO todo_sql
-    (task, deadline, location, difficulty)
-    VALUES ($1, $2, $3, $4)
+    (task, deadline, location, priority, complete)
+    VALUES ($1, $2, $3, $4, $5)
     RETURNING *`,
-    [todo.task, todo.deadline, todo.location, todo.difficulty]);
+    [todo.task, todo.deadline, todo.location, todo.priority, todo.complete]);
 }
 
+//.update() requires a table and an id, so basically todo_sql and some id
 Todo.update = (todo, id) => {
-  return todo.one(`
+  return db.one(`
     UPDATE todo_sql SET
     task = $1,
     deadline = $2,
     location = $3,
-    difficulty = $4
+    priority = $4,
+    complete = $5,
+    id = $6
     RETURNING *`,
-    [todo.task, todo.deadline, todo.location, todo.difficulty]);
+    [todo.task, todo.deadline, todo.location, todo.priority, todo.complete, id]);
 }
 
 Todo.destroy = (id) => {
