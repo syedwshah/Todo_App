@@ -1,25 +1,33 @@
-<% include ./partials/boilerplate %>
+<% include ../partials/boilerplate %>
 
-<h1> hello from todo-index.ejs What else is new?</h1>
+<h1>Syed's Todo List</h1>
 
-
-<!-- <section>
+<section>
   <div class="pageContent">
     <div>Welcome to your to-do list!</div>
 
     <div class="todoList">
       <ul>
-        <% for (let todo of data){ %>
+        <% for (let item in todo){ %>
          <li>
            <a href="/todo/<%= todo.id %>">
-            <b><%= todo.task %></b>
+            <p><%= todo[item].task %></p>
            </a>
+           <p><%= todo[item].deadline %></p>
+           <p><%= todo[item].location %></p>
+           <p><%= todo[item].priority %></p>
+           <p><%= todo[item].complete %></p>
+          <button type="submit">Remove</button>
          </li>
         <% } %>
       </ul>
     </div>
   </div>
-</section> -->
+
+  <div class="add-button">
+    <a href="/todo/add">Add Item</a>
+  </div>
+</section>
 
 
-<% include ./partials/end %>
+<% include ../partials/end %>

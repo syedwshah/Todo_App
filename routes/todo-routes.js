@@ -3,6 +3,8 @@ const express = require('express');
 const todoRoutes = express.Router();
 const todoController = require('../controllers/todo-controller');
 
+//Following get after '/todo' in browser
+
 todoRoutes.get('/', todoController.index);
 todoRoutes.post('/', todoController.create);
 

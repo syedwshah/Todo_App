@@ -1,4 +1,18 @@
 <% include ../partials/boilerplate %>
 
 <h1> hello from todo-add.ejs it works</h1>
+
+<div class="pizza-container">
+  <p>Feel free to add whatever. I won't judge</p>
+
+  <form method='POST' action='/todo'>
+    <input name='task' type='text' placeholder='task' />
+    <input name='deadline' type='text' placeholder='deadline' />
+    <input name='location' type='text' placeholder='location'>
+    <input name='priority' type='text' placeholder='priority (1-10)' />
+    <input name='complete' type='text' placeholder='complete (true/false)'>
+    <input class='submitBtn' type='submit' value='Submit!' />
+  </form>
+</div>
+
 <% include ../partials/end %>

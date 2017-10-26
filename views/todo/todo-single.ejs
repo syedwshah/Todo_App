@@ -2,4 +2,17 @@
 
 <h1> hello from todo-single.ejs it works</h1>
 
+<section>
+  <div class="pageContent">
+    <ul>
+      <b><%= todo.id %></b>
+      <li>Task: <%= todo.task %></li>
+      <li>Deadline: <%= todo.deadline %></li>
+      <li>Location: <%= todo.location %></li>
+      <li>Priority: <%= todo.priority %></li>
+      <li>Complete: <%= todo.complete %></li>
+  </ul>
+  </div>
+</section>
+
 <% include ../partials/end %>

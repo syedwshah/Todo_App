@@ -5,7 +5,7 @@ const todoController = {};
 todoController.index = (req, res) => {
   Todo.findAll()
     .then((todo) => {
-      res.status(200).render('.todo/todo-index', {
+      res.status(200).render('./todo/todo-index', {
         todo,
       });
     }).catch(err => {
@@ -20,7 +20,7 @@ todoController.index = (req, res) => {
 todoController.show = (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
-      res.status(200).render('./todo/todo/todo-single', {
+      res.status(200).render('./todo/todo-single', {
         todo,
       });
     }).catch(err => {
