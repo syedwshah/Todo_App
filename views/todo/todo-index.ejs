@@ -1,0 +1,25 @@
+<% include ./partials/boilerplate %>
+
+<h1> hello from todo-index.ejs What</h1>
+
+
+<section>
+  <div class="pageContent">
+    <div>Welcome to your to-do list!</div>
+
+    <div class="todoList">
+      <ul>
+        <% for (let todo of data){ %>
+         <li>
+           <a href="/todo/<%= todo.id %>">
+            <b><%= todo.task %></b>
+           </a>
+         </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<% include ./partials/end %>

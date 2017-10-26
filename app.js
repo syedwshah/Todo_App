@@ -19,7 +19,7 @@ app.use(express.static('public'));
 
 //views config (to handle views)
 app.set('views', path.join(__dirname,'views'));
-app.set('view enginer','ejs');
+app.set('view engine','ejs');
 
 //config port
 const port = process.env.PORT || 3000;

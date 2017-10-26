@@ -4,23 +4,23 @@ const todoController = {};
 
 todoController.index = (req, res) => {
   Todo.findAll()
-  .then(todo => {
-    res.status(200).render('./todo-index' {
-      todo,
-    });
-  }).catch(err => {
+    .then(todo => {
+      res.status(200).render('./todo-index', {
+        todo,
+      });
+    }).catch(err => {
       console.log(err);
-        res.status(500).json({
-          message: "Not Found!",
-          error: err,
-        });
+      res.status(500).json({
+        message: 'Not found!',
+        error: err,
+      });
     });
-}
+};
 
 todoController.show = (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
-      res.status(200).render('./todo-single', {
+      res.status(200).render('./todo/todo-single', {
         todo,
       });
     }).catch(err => {
