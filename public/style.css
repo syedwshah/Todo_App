@@ -84,6 +84,11 @@ a {
   margin-top: 7%;
 }
 
+.userAuth {
+
+  padding-top: 50px;
+}
+
 /*--- Media Queries --*/
 @media screen and (max-width: 900px) {
   .indexPage .content {
