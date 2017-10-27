@@ -1,7 +1,135 @@
-* {
-  margin: auto;
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html, body {
+  /*Use this to reset browser styling*/
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-a {
+/*a {
   text-decoration: none;
+}*/
+
+/*--------------------------LANDING PAGE---------------------------*/
+.indexPage .intro {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background: url(https://cdn-images-1.medium.com/max/2000/1*a8T8Q3OPT4cj5-HMcnQpUg.jpeg);
+  display: table; There's some space at top of page, this line removes that space
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.indexPage .intro .inner {
+  display: table-cell;
+  vertical-align: middle; /*Using "display:table cell" and "verticle-align:middle"
+  we can vertically center the content of this <div> */
+
+  /*Standard max-*/
+  width: 100%;
+  /*max-width: none;*/
+}
+
+.indexPage .content{
+  /*Using "max-width: auto" and "margin: 0 auto"
+  we can horizontally center the content of this <div> */
+
+  max-width: 600px; /*This prevents the value of the width property from becoming larger than max-width.*/
+
+  margin: 0 auto; /*You can set the margin property to auto to
+  horizontally center the element within its container.*/
+
+  text-align: center; /*Stil not quite centered without this line*/
+
+  padding-bottom: 20%; /*To lift text up a bit from bottom of the page*/
+}
+
+.indexPage .content h1 {
+  /*font-family: "Yantramanav", sans-serif;*/
+  font-family: 'Lobster', cursive;
+  font-size: 650%;
+  font-weight: 100;
+  color: #5C69B0;
+}
+
+.indexPage .startButton {
+  font-style: "Montserrat", sans-serif;
+  font-size: 150%;
+  font-weight: 400;
+  color: #54606E;
+  text-decoration: none; /*Remove underline and hyperlink decorations*/
+  border: #5C6978 solid;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.indexPage .startButton:hover {
+  color: #CDBFD6;
+  border: #CDBFD6 solid 2px;
+}
+
+.indexPage p{
+  font-size: 200%;
+  line-height: 120%;
+  font-family: "Yantramanav", sans-serif;
+  text-align: center;
+  color: #5C69B0;
+  font-weight: 200px;
+  margin-top: 10%;
+  animation-delay: 1s;
+}
+
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+  .indexPage .content {
+    padding-bottom: 30%;
+  }
+  .indexPage .content h1 {
+    font-size: 450%;
+  }
+  .indexPage .startButton {
+    font-size: 128%;
+    padding: 10px, 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+ .indexPage .content {
+    padding-bottom: 40%;
+  }
+ .indexPage .content h1 {
+    font-size: 300%;
+  }
+  .indexPage .startButton {
+    font-size: 110%;
+    padding: 8px, 16px;
+  }
+  .indexPage p{
+    font-size: 120%;
+    line-height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+ .indexPage .content {
+    padding-bottom: 50%;
+  }
+  .indexPage .content h1 {
+    font-size: 250%;
+    line-height: 100%;
+  }
+  .indexPage .startButton {
+    font-size: 110%;
+    padding: 7px, 15px;
+  }
+  .indexPage p{
+    font-size: 100%;
+    line-height: 100%;
+  }
+}
+
+/*-------------------------- END LANDING PAGE STYLES---------------------------*/
