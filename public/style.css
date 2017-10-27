@@ -10,9 +10,9 @@ html, body {
   width: 100%;
 }
 
-/*a {
+a {
   text-decoration: none;
-}*/
+}
 
 /*--------------------------LANDING PAGE---------------------------*/
 .indexPage .intro {
@@ -81,8 +81,7 @@ html, body {
   text-align: center;
   color: #5C69B0;
   font-weight: 200px;
-  margin-top: 10%;
-  animation-delay: 1s;
+  margin-top: 7%;
 }
 
 /*--- Media Queries --*/
@@ -133,3 +132,8 @@ html, body {
 }
 
 /*-------------------------- END LANDING PAGE STYLES---------------------------*/
+
+/*-------------------------- TODO-INDEX STYLES---------------------------*/
+
+/*-------------------------- TODO-INDEX STYLES---------------------------*/
+
