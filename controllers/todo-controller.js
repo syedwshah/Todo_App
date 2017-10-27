@@ -40,10 +40,8 @@ todoController.create = (req, res) => {
     location: req.body.location,
     priority: req.body.priority,
     complete: req.body.complete,
-  }).then(todo => {
-    res.redirect('/todo', {
-      pizza,
-    });
+  }).then(() => {
+    res.redirect('/todo');
     //redirect uses the directory the browser will follow, not the relative path.
   }).catch(err => {
     console.log(err);
@@ -62,7 +60,7 @@ todoController.update = (req, res) => {
     priority: req.body.priority,
     complete: req.body.complete,
   }, req.params.id).then(todo => {
-    res.redirect('back');
+    res.redirect(`/todo`);
   }).catch(err => {
     console.log(err);
     res.status(500).json({

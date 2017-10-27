@@ -12,6 +12,28 @@
       <li>Priority: <%= todo.priority %></li>
       <li>Complete: <%= todo.complete %></li>
   </ul>
+
+   <br><br>
+  <form method="POST" action="/todo/<%= todo.id %>/?_method=PUT">
+    <label>Task</label>
+    <input name="task" value="<%= todo.task%>"><br>
+    <label>Deadline</label>
+    <input name="deadline" value="<%= todo.deadline%>"><br>
+    <label>Location</label>
+    <input name="location" value="<%= todo.location%>"><br>
+    <label>Priority</label>
+    <input name="priority" value="<%= todo.priority%>"><br>
+    <label>Complete</label>
+    <input name="complete" value="<%= todo.complete%>"><br>
+    <br>
+    <button type="submit">Save Changes</button>
+
+  </form>
+
+  <form method="POST" action="/todo/<%= todo.id %>?_method=DELETE">
+      <button type="submit">Remove</button>
+  </form>
+
   </div>
 </section>
 

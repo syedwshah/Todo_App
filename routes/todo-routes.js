@@ -13,7 +13,7 @@ todoRoutes.get('/add', (req,res) => {
 })
 
 todoRoutes.get('/:id', todoController.show);
-todoRoutes.put('/', todoController.update);
+todoRoutes.put('/:id', todoController.update);
 todoRoutes.delete('/:id', todoController.delete);
 
 module.exports = todoRoutes;

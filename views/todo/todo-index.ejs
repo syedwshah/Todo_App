@@ -10,23 +10,29 @@
       <ul>
         <% for (let item in todo){ %>
          <li>
-           <a href="/todo/<%= todo.id %>">
+           <a href="/todo/<%= todo[item].id %>">
             <p><%= todo[item].task %></p>
            </a>
            <p><%= todo[item].deadline %></p>
            <p><%= todo[item].location %></p>
            <p><%= todo[item].priority %></p>
            <p><%= todo[item].complete %></p>
-          <button type="submit">Remove</button>
+
+          <form method="POST" action="/todo/<%= todo[item].id %>?_method=DELETE">
+              <button type="submit">Remove</button>
+          </form>
+
          </li>
         <% } %>
       </ul>
     </div>
   </div>
 
-  <div class="add-button">
+  <button class="add-button">
     <a href="/todo/add">Add Item</a>
-  </div>
+  </button>
+
+
 </section>
 
 

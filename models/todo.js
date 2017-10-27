@@ -26,8 +26,8 @@ Todo.update = (todo, id) => {
     deadline = $2,
     location = $3,
     priority = $4,
-    complete = $5,
-    id = $6
+    complete = $5
+    WHERE id = $6
     RETURNING *`,
     [todo.task, todo.deadline, todo.location, todo.priority, todo.complete, id]);
 }

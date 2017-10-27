@@ -1,5 +1,49 @@
 <% include ./partials/boilerplate %>
 
-<h1> hello from index.ejs</h1>
-<h1>Not much goes here for now, really...</h1>
+<section class="indexPage">
+  <div>
+    <section class="intro">
+      <div class="inner">
+        <div class="content">
+          <div>
+            <h1>TO DO</h1>
+          </div>
+          <div>
+            <a class="startButton" href="/todo">EXPLORE</a>
+            <a class="startButton" id='loginBtn'>LOG IN</a>
+            <a class="startButton" id='registerBtn'>REGISTER</a>
+          </div>
+
+          <section class="userAuth">
+            <div id='login'>
+              <form method='POST' action='/auth/login'>
+                <input name='username' type='text' placeholder='username' required />
+                <input name='password' type='password' placeholder='password' required />
+                <input type='submit' value='Log in!' />
+              </form>
+            </div>
+
+            <div id='register'>
+              <form method='POST' action='/auth/register'>
+                <input name='username' type='text' placeholder='username' required /><br>
+                <input name='email' type='email' placeholder='email' required /><br>
+                <input name='password' type='password' placeholder='password' required /><br>
+                <input name='firstname' type='text' placeholder='first name' required /><br>
+                <input name='lastname' type='text' placeholder='last name' required /><br>
+                <input type='submit' value='Register!' />
+              </form>
+            </div>
+        </section>
+
+        </div>
+        <p>
+          SHHH I'M HIDING!
+        </p>
+      </div>
+  </section>
+  </div>
+</section>
+
+<script src='/src/jquery.js'></script>
+<script src='/src/main.js'></script>
 <% include ./partials/end %>
